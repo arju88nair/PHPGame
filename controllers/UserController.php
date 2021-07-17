@@ -23,9 +23,23 @@ class UserController extends \ControllerAbstract
     /**
      * User Register view route
      */
-    public function index()
+    public function registerView()
     {
         $view = new \View('register');
+    }
+
+    /**
+     * User login view route
+     */
+    public function loginView()
+    {
+        $view = new \View('login');
+    }
+
+    public function doRegister()
+    {
+var_dump($_REQUEST);       die();
+
     }
 
 }

@@ -21,7 +21,13 @@ $controller = new \controllers\Controller();
 // Routing it up!
 switch ($request_uri[0]) {
     case '/register':
-        return $UserController->index();
+        return $UserController->registerView();
+        break;
+    case '/login':
+        return $UserController->loginView();
+        break;
+        case '/doRegister':
+        return $UserController->doRegister();
         break;
 
     default:
