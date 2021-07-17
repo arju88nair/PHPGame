@@ -14,7 +14,7 @@ class View
     public function __construct($template)
     {
         try {
-            $file = 'Views/' . strtolower($template) . '.php';
+            $file = 'views/' . strtolower($template) . '.php';
             if (file_exists($file)) {
                 $this->render = $file;
             } else {

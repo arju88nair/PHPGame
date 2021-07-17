@@ -1,7 +1,9 @@
 <?php
 
+include_once 'controllers/UserController.php';
+include_once 'controllers/CourseController.php';
+include_once 'controllers/RegistrationController.php';
 include_once 'controllers/Controller.php';
-
 
 // Grabs the URI and breaks it apart in case we have querystring stuff
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
@@ -12,13 +14,16 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|js|css)$/', $_SERVER["REQUEST_URI"])) {
 }
 
 // Instance of the controllers
+$UserController = new \controllers\UserController();
 $controller = new \controllers\Controller();
+
 
 // Routing it up!
 switch ($request_uri[0]) {
-    case '/':
-        return $controller->index();
+    case '/register':
+        return $UserController->index();
         break;
+
     default:
         echo "404 not found";
         break;
