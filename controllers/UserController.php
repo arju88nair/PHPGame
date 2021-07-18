@@ -38,7 +38,16 @@ class UserController extends \ControllerAbstract
 
     public function doRegister()
     {
-var_dump($_REQUEST);       die();
+        $main = new Controller();
+        $userExist = $this->conn->selectFreeRun("SELECT * FROM users WHERE username='" . $_POST["username"] . "'");
+        if ($userExist) {
+            $data = ['status' => 401, 'message' => 'user already exists'];
+            header('HTTP/1.1 500 user already exists');
+            die(json_encode($data));
+        } else {
+            $_POST['password'] = PASSWORD_HASH($_POST["password"], PASSWORD_DEFAULT);
+            return $main->add();
+        }
 
     }
 

@@ -55,17 +55,19 @@ include_once 'partials/header.php';
 <main class="form-signin">
     <form>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="mode" value="users" required>
+        </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="User name">
+            <input type="text" class="form-control" name="username" id="username" placeholder="User name">
             <label for="floatingInput">User name</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="Nickname">
+            <input type="text" class="form-control" id="nick" name="nickname" placeholder="Nickname">
             <label for="floatingPassword">Nickname</label>
         </div>
 
@@ -77,6 +79,8 @@ include_once 'partials/header.php';
         <button class="w-100 btn btn-lg btn-primary" id="signup" type="submit">Sign in</button>
     </form>
     <a href="/login">Already a user? Log in</a>
+    <div class="alert alert-danger" id="alert" role="alert" style="display: none">
+    </div>
 </main>
 
 
@@ -84,10 +88,8 @@ include_once 'partials/header.php';
 <script>
     $(document).ready(function () {
         let request;
-        console.log("Sdc")
         // Bind to the submit event of our form
         $("form").submit(function (event) {
-            console.log("ss")
 
             // Prevent default posting of form - put here to work in case of errors
             event.preventDefault();
@@ -96,14 +98,14 @@ include_once 'partials/header.php';
             if (request) {
                 request.abort();
             }
-            // setup some local variables
-            var $form = $(this);
+            // setup some local letiables
+            let form = $(this);
 
+            console.log(form)
             // Let's select and cache all the fields
-            var $inputs = $form.find("input, select, button, textarea");
-
+            let $inputs = form.find("input, select, button, textarea");
             // Serialize the data in the form
-            var serializedData = $form.serialize();
+            let serializedData = form.serialize();
             console.log(serializedData)
 
             // Let's disable the inputs for the duration of the Ajax request.
@@ -122,11 +124,15 @@ include_once 'partials/header.php';
             request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console
                 console.log("Hooray, it worked!");
+                window.location.href='/'
+
             });
 
             // Callback handler that will be called on failure
             request.fail(function (jqXHR, textStatus, errorThrown) {
                 // Log the error to the console
+                $('#alert').text(errorThrown);
+                $('#alert').show();
                 console.error(
                     "The following error occurred: " +
                     textStatus, errorThrown

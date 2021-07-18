@@ -137,17 +137,23 @@ class Controller extends \ControllerAbstract
         extract($escaped);
 
         // Inserting data
-        $table = $mode;
+        $table = $escaped['mode'];
         unset($escaped['mode']);
         $field = array_keys($escaped);
         $data = array_values($escaped);
         try {
             $result = $this->conn->insertData($table, $field, $data);
             if ($result) {
-                header("Location: /" . $table);
+                $data = [ 'status' => 200, 'message' => 'Successfully added' ];
+                header('Content-Type: application/json');
+
+
             } else {
-                die("Something went wrong");
+                $data = [ 'status' => 401, 'message' => 'Something went wong' ];
+                header('HTTP/1.1 500 Internal Server ');
+                die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
             }
+            echo json_encode($data);
         } //catch exception
         catch (Exception $e) {
             echo 'Message: ' . $e->getMessage();
@@ -167,7 +173,6 @@ class Controller extends \ControllerAbstract
         $escaped = array_map(function ($e) {
             return mysqli_real_escape_string($this->db, $e);
         }, $_POST);
-
         $errors = [];
         // form validation: ensure that the form is correctly filled ...
         // by adding (array_push()) corresponding error unto $errors array
