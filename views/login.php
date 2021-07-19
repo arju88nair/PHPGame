@@ -56,12 +56,15 @@ include_once 'partials/header.php';
     <form>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="mode" value="users" required>
+        </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="User name">
+            <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User name">
             <label for="floatingInput">User name</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
         </div>
 
@@ -73,10 +76,73 @@ include_once 'partials/header.php';
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     </form>
     <a href="/register">Sign up</a>
-
+    <div class="alert alert-danger" id="alert" role="alert" style="display: none">
+    </div>
 </main>
-
-
-
 </body>
+<script>
+    $(document).ready(function () {
+        let request;
+        // Bind to the submit event of our form
+        $("form").submit(function (event) {
+
+            // Prevent default posting of form - put here to work in case of errors
+            event.preventDefault();
+
+            // Abort any pending request
+            if (request) {
+                request.abort();
+            }
+            // setup some local letiables
+            let form = $(this);
+
+            console.log(form)
+            // Let's select and cache all the fields
+            let $inputs = form.find("input, select, button, textarea");
+            // Serialize the data in the form
+            let serializedData = form.serialize();
+            console.log(serializedData)
+
+            // Let's disable the inputs for the duration of the Ajax request.
+            // Note: we disable elements AFTER the form data has been serialized.
+            // Disabled form elements will not be serialized.
+            $inputs.prop("disabled", true);
+
+            // Fire off the request to /form.php
+            request = $.ajax({
+                url: "/doLogin",
+                type: "post",
+                data: serializedData
+            });
+
+            // Callback handler that will be called on success
+            request.done(function (response, textStatus, jqXHR) {
+                // Log a message to the console
+                console.log("Hooray, it worked!");
+                window.location.href='/'
+
+            });
+
+            // Callback handler that will be called on failure
+            request.fail(function (jqXHR, textStatus, errorThrown) {
+                // Log the error to the console
+                $('#alert').text(errorThrown);
+                $('#alert').show();
+                console.error(
+                    "The following error occurred: " +
+                    textStatus, errorThrown
+                );
+            });
+
+            // Callback handler that will be called regardless
+            // if the request failed or succeeded
+            request.always(function () {
+                // Reenable the inputs
+                $inputs.prop("disabled", false);
+            });
+
+        });
+    });
+</script>
+
 </html>

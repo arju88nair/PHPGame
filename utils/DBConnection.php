@@ -7,7 +7,7 @@
 /**
  * Class DBConnection for maintaining DB connection and disconnect
  */
-Class DBConnection
+class DBConnection
 {
     public $conn;
     public $dataSet;
@@ -43,6 +43,7 @@ Class DBConnection
     function selectFreeRun($query)
     {
 
+
         $result = mysqli_query($this->conn, $query);
         $this->dataSet = [];
         if (mysqli_num_rows($result) > 0) {
@@ -66,8 +67,6 @@ Class DBConnection
 
         $sql = "INSERT INTO $table (" . $field_values . ") 
     VALUES ('" . $data_values . "') ";
-        print_r($sql);
-        die();
         $result = $this->conn->query($sql);
         return $result;
     }

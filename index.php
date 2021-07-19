@@ -1,8 +1,7 @@
 <?php
 
 include_once 'controllers/UserController.php';
-include_once 'controllers/CourseController.php';
-include_once 'controllers/RegistrationController.php';
+include_once 'controllers/HomeController.php';
 include_once 'controllers/Controller.php';
 
 // Grabs the URI and breaks it apart in case we have querystring stuff
@@ -15,6 +14,7 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|js|css)$/', $_SERVER["REQUEST_URI"])) {
 
 // Instance of the controllers
 $UserController = new \controllers\UserController();
+$HomeController = new \controllers\HomeController();
 $controller = new \controllers\Controller();
 
 
@@ -26,8 +26,14 @@ switch ($request_uri[0]) {
     case '/login':
         return $UserController->loginView();
         break;
-        case '/doRegister':
+    case '/doRegister':
         return $UserController->doRegister();
+        break;
+    case '/doLogin':
+        return $UserController->doLogin();
+        break;
+    case '/':
+        return $HomeController->homeVIew();
         break;
 
     default:

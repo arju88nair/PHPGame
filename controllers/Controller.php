@@ -146,12 +146,9 @@ class Controller extends \ControllerAbstract
             if ($result) {
                 $data = [ 'status' => 200, 'message' => 'Successfully added' ];
                 header('Content-Type: application/json');
-
-
             } else {
                 $data = [ 'status' => 401, 'message' => 'Something went wong' ];
                 header('HTTP/1.1 500 Internal Server ');
-                die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
             }
             echo json_encode($data);
         } //catch exception
