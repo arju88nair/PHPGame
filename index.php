@@ -35,6 +35,12 @@ switch ($request_uri[0]) {
     case '/':
         return $HomeController->homeVIew();
         break;
+    case '/saveDice':
+        return $HomeController->saveDice();
+        break;
+    case '/admin':
+        return $HomeController->saveDice();
+        break;
 
     default:
         echo "404 not found";

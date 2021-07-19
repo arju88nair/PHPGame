@@ -14,7 +14,6 @@ class UserController extends \ControllerAbstract
      * @var Controller
      */
     private $mainController;
-
     /**
      * UserController constructor.
      */
@@ -22,6 +21,7 @@ class UserController extends \ControllerAbstract
     {
         parent::__construct();
         $this->mainController = new Controller();
+        session_start();
     }
 
 
@@ -50,6 +50,7 @@ class UserController extends \ControllerAbstract
             die(json_encode($data));
         } else {
             $_POST['password'] = md5($_POST["password"]);
+            $_SESSION['user'] = $_POST["username"];
             return $this->mainController->add();
         }
     }
@@ -59,6 +60,7 @@ class UserController extends \ControllerAbstract
         $_POST['password'] = md5($_POST["password"]);
         $userExist = $this->conn->selectFreeRun("SELECT * FROM users WHERE (username='" . $_POST["username"] . "' or nickname='" . $_POST["username"] . "')and password = '" . $_POST["password"] . "'");
         if ($userExist) {
+            $_SESSION['user'] = $_POST["username"];
             $data = ['status' => 200, 'message' => 'Successfully logged in'];
             header('Content-Type: application/json');
             echo json_encode($data);

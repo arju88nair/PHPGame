@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccessss'" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/DBConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DBConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/resources/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/resources/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/resources/signin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +52,7 @@
       <workItem from="1626528757150" duration="5561000" />
       <workItem from="1626587649689" duration="544000" />
       <workItem from="1626618725990" duration="4232000" />
-      <workItem from="1626706242519" duration="5259000" />
+      <workItem from="1626706242519" duration="8181000" />
     </task>
     <task id="LOCAL-00001" summary="User registration login page">
       <created>1626531762448</created>
@@ -83,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626624117793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ROlling and login">
+      <created>1626712842614</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626712842614</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +92,7 @@
     <MESSAGE value="User registration login page" />
     <MESSAGE value="Register start" />
     <MESSAGE value="Registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration" />
+    <MESSAGE value="ROlling and login" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROlling and login" />
   </component>
 </project>

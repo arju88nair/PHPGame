@@ -317,8 +317,6 @@
         if (count >= 3) {
             document.getElementById("roll-button").disabled = true;
             alert("Thank you for playing.If you wish to play again, please refresh the page")
-            console.log(values)
-
             sendData();
         }
     }
@@ -338,18 +336,17 @@
 
     function sendData() {
 
+        let data={'score':values.reduce((a, b) => a + b, 0),'mode':'game'}
         request = $.ajax({
-            url: "/doLogin",
+            url: "/saveDice",
             type: "post",
-            data: serializedData
+            data: data
         });
 
         // Callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR) {
             // Log a message to the console
             console.log("Hooray, it worked!");
-            window.location.href = '/'
-
         });
 
         // Callback handler that will be called on failure
@@ -367,7 +364,6 @@
         // if the request failed or succeeded
         request.always(function () {
             // Reenable the inputs
-            $inputs.prop("disabled", false);
         });
 
     }
