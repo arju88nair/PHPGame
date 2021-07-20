@@ -53,7 +53,12 @@ class HomeController extends \ControllerAbstract
      */
     public function adminView()
     {
+        if ($_SESSION['is_admin'] !== '1') {
+            header("Location: /login");
+            exit();
+        }
+        $scores = $this->conn->selectFreeRun("select *from games ");
         $view = new \View('admin');
-
+        $view->assign('scores', $scores);
     }
 }

@@ -60,8 +60,9 @@ class UserController extends \ControllerAbstract
         $_POST['password'] = md5($_POST["password"]);
         $userExist = $this->conn->selectFreeRun("SELECT * FROM users WHERE (username='" . $_POST["username"] . "' or nickname='" . $_POST["username"] . "')and password = '" . $_POST["password"] . "'");
         if ($userExist) {
-
             $_SESSION['user'] = $_POST["username"];
+            $_SESSION['is_admin'] = $userExist[0]['is_admin'];
+
             $data = ['status' => 200, 'message' => 'Successfully logged in','data' => $userExist];
             header('Content-Type: application/json');
             echo json_encode($data);
