@@ -118,8 +118,10 @@ include_once 'partials/header.php';
             // Callback handler that will be called on success
             request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console
-                console.log("Hooray, it worked!");
-                window.location.href='/'
+                if (response['data'][0]['is_admin'] !== '0') {
+                    window.location.href = '/admin'
+                }
+                window.location.href = '/'
 
             });
 

@@ -39,7 +39,7 @@ switch ($request_uri[0]) {
         return $HomeController->saveDice();
         break;
     case '/admin':
-        return $HomeController->saveDice();
+        return $HomeController->adminView();
         break;
 
     default:

@@ -46,6 +46,7 @@ class DBConnection
 
         $result = mysqli_query($this->conn, $query);
         $this->dataSet = [];
+
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 array_push($this->dataSet, $row);

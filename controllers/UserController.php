@@ -60,12 +60,13 @@ class UserController extends \ControllerAbstract
         $_POST['password'] = md5($_POST["password"]);
         $userExist = $this->conn->selectFreeRun("SELECT * FROM users WHERE (username='" . $_POST["username"] . "' or nickname='" . $_POST["username"] . "')and password = '" . $_POST["password"] . "'");
         if ($userExist) {
+
             $_SESSION['user'] = $_POST["username"];
-            $data = ['status' => 200, 'message' => 'Successfully logged in'];
+            $data = ['status' => 200, 'message' => 'Successfully logged in','data' => $userExist];
             header('Content-Type: application/json');
             echo json_encode($data);
         } else {
-            $data = ['status' => 401, 'message' => 'user already exists'];
+            $data = ['status' => 401, 'message' => 'user does not exist'];
             header('HTTP/1.1 500 user does not exist');
             die(json_encode($data));
         }

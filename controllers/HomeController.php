@@ -48,4 +48,12 @@ class HomeController extends \ControllerAbstract
         }
     }
 
+    /**
+     * Admin view
+     */
+    public function adminView()
+    {
+        $view = new \View('admin');
+
+    }
 }
