@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/DBConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DBConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
       <workItem from="1626587649689" duration="544000" />
       <workItem from="1626618725990" duration="4232000" />
       <workItem from="1626706242519" duration="8181000" />
-      <workItem from="1626799725119" duration="1899000" />
+      <workItem from="1626799725119" duration="2801000" />
     </task>
     <task id="LOCAL-00001" summary="User registration login page">
       <created>1626531762448</created>
@@ -85,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626712842614</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Admin view">
+      <created>1626802403153</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626802403153</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +98,7 @@
     <MESSAGE value="Register start" />
     <MESSAGE value="Registration" />
     <MESSAGE value="ROlling and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROlling and login" />
+    <MESSAGE value="Admin view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin view" />
   </component>
 </project>
