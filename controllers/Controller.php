@@ -176,22 +176,6 @@ class Controller extends \ControllerAbstract
 
         //TODO: Adding session or similar for error reporting
 
-        foreach ($escaped as $key => $value) {
-            if ($key === 'active') {
-                $activeValues = [0, 1];
-                if (!in_array($value, $activeValues)) {
-                    array_push($errors, "Active should be 1 or 0");
-                }
-            }
-            if ($value === '')
-                array_push($errors, ucfirst($value) . " is required");
-        }
-
-        if (count($errors) > 0) {
-            print_r($errors);
-            die;
-        }
-
         return $escaped;
     }
 

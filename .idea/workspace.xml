@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/ControllerAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ControllerAbstract.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/controllers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -53,6 +53,8 @@
       <workItem from="1626618725990" duration="4232000" />
       <workItem from="1626706242519" duration="8181000" />
       <workItem from="1626799725119" duration="3825000" />
+      <workItem from="1626845199563" duration="2638000" />
+      <workItem from="1626877002220" duration="2122000" />
     </task>
     <task id="LOCAL-00001" summary="User registration login page">
       <created>1626531762448</created>

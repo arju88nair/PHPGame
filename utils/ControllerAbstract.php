@@ -17,7 +17,9 @@ abstract class ControllerAbstract
      */
     protected function __construct()
     {
+        session_start();
         $this->_doDbConnection();
+        $this->checkIfAuthenticated();
         // Can do more process here
     }
 
@@ -32,5 +34,16 @@ abstract class ControllerAbstract
         $this->db = $this->conn->getDbConnect();
     }
 
+    /**
+     * Crude authenticated middleware
+     */
+    private function checkIfAuthenticated()
+    {
+        session_destroy();
+        if (is_null($_SESSION) || empty($_SESSION)) {
+            header("Location: /");
+            exit();
+        }
+    }
 
 }
