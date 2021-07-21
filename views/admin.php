@@ -24,21 +24,6 @@ include_once 'partials/header.php';
  ';
     }
     ?>
-    <tr>
-        <td>Tiger Nixon</td>
-        <td>System Architect</td>
-        <td>Edinburgh</td>
-        <td>61</td>
-
-    </tr>
-
-    <tr>
-        <td>Donna Snider</td>
-        <td>Customer Support</td>
-        <td>New York</td>
-        <td>27</td>
-
-    </tr>
     </tbody>
     <tfoot>
     <tr>

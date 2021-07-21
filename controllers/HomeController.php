@@ -22,6 +22,7 @@ class HomeController extends \ControllerAbstract
     {
         parent::__construct();
         $this->mainController = new Controller();
+
     }
 
 
@@ -30,6 +31,7 @@ class HomeController extends \ControllerAbstract
      */
     public function homeVIew()
     {
+        $this->checkIfAuthenticated();
         $view = new \View('home');
     }
 
@@ -53,6 +55,7 @@ class HomeController extends \ControllerAbstract
      */
     public function adminView()
     {
+        $this->checkIfAuthenticated();
         if ($_SESSION['is_admin'] !== '1') {
             header("Location: /login");
             exit();
@@ -61,4 +64,17 @@ class HomeController extends \ControllerAbstract
         $view = new \View('admin');
         $view->assign('scores', $scores);
     }
+
+
+    /**
+     * Crude authenticated middleware
+     */
+    private function checkIfAuthenticated()
+    {
+        if (is_null($_SESSION) || empty($_SESSION)) {
+            header("Location: /login");
+            exit();
+        }
+    }
+
 }

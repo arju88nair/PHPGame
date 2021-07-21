@@ -82,6 +82,7 @@ include_once 'partials/header.php';
 </body>
 <script>
     $(document).ready(function () {
+
         let request;
         // Bind to the submit event of our form
         $("form").submit(function (event) {
@@ -119,7 +120,9 @@ include_once 'partials/header.php';
             request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console
                 if (response['data'][0]['is_admin'] !== '0') {
-                    window.location.href = '/admin'
+                    console.log(response)
+                    window.location.href = 'admin';
+                    return;
                 }
                 window.location.href = '/'
 
