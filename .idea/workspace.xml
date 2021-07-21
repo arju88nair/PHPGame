@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ControllerAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ControllerAbstract.php" afterDir="false" />
-    </list>
+    <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="Redirect middleware thingy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +50,7 @@
       <workItem from="1626706242519" duration="8181000" />
       <workItem from="1626799725119" duration="3825000" />
       <workItem from="1626845199563" duration="2638000" />
-      <workItem from="1626877002220" duration="2122000" />
+      <workItem from="1626877002220" duration="2518000" />
     </task>
     <task id="LOCAL-00001" summary="User registration login page">
       <created>1626531762448</created>
@@ -98,11 +94,29 @@
       <option name="project" value="LOCAL" />
       <updated>1626803277377</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Redirect middleware thingy">
+      <created>1626883326103</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626883326103</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User registration login page" />
@@ -111,6 +125,7 @@
     <MESSAGE value="ROlling and login" />
     <MESSAGE value="Admin view" />
     <MESSAGE value="File export" />
-    <option name="LAST_COMMIT_MESSAGE" value="File export" />
+    <MESSAGE value="Redirect middleware thingy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redirect middleware thingy" />
   </component>
 </project>

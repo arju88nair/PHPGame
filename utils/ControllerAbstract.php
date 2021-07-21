@@ -39,7 +39,6 @@ abstract class ControllerAbstract
      */
     private function checkIfAuthenticated()
     {
-        session_destroy();
         if (is_null($_SESSION) || empty($_SESSION)) {
             header("Location: /");
             exit();
