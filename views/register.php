@@ -59,22 +59,17 @@ include_once 'partials/header.php';
             <input type="hidden" class="form-control" name="mode" value="users" required>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" name="username" id="username" placeholder="User name">
+            <input type="text" class="form-control" name="username" id="username" placeholder="User name" required>
             <label for="floatingInput">User name</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                   minlength="4" required>
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="nick" name="nickname" placeholder="Nickname">
+            <input type="text" class="form-control" id="nick" name="nickname" placeholder="Nickname" required>
             <label for="floatingPassword">Nickname</label>
-        </div>
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" id="signup" type="submit">Sign in</button>
     </form>
@@ -100,13 +95,10 @@ include_once 'partials/header.php';
             }
             // setup some local letiables
             let form = $(this);
-
-            console.log(form)
             // Let's select and cache all the fields
             let $inputs = form.find("input, select, button, textarea");
             // Serialize the data in the form
             let serializedData = form.serialize();
-            console.log(serializedData)
 
             // Let's disable the inputs for the duration of the Ajax request.
             // Note: we disable elements AFTER the form data has been serialized.
@@ -124,7 +116,7 @@ include_once 'partials/header.php';
             request.done(function (response, textStatus, jqXHR) {
                 // Log a message to the console
                 console.log("Hooray, it worked!");
-                window.location.href='/'
+                window.location.href = '/'
 
             });
 

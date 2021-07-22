@@ -9,7 +9,6 @@ include_once 'partials/header.php';
         <th>Name</th>
         <th>Score</th>
         <th>Date</th>
-
     </tr>
     </thead>
     <tbody>
@@ -26,13 +25,6 @@ include_once 'partials/header.php';
     ?>
     </tbody>
     <tfoot>
-    <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Age</th>
-
-    </tr>
     </tfoot>
 </table>
 </body>

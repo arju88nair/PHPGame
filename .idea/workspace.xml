@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="Remove destroy">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+    <list default="true" id="a41c7e6a-2c25-4b93-b2a3-368d73253296" name="Default Changelist" comment="First of the many final push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
       <workItem from="1626799725119" duration="3825000" />
       <workItem from="1626845199563" duration="2638000" />
       <workItem from="1626877002220" duration="3719000" />
-      <workItem from="1626969754145" duration="2071000" />
+      <workItem from="1626969754145" duration="2467000" />
     </task>
     <task id="LOCAL-00001" summary="User registration login page">
       <created>1626531762448</created>
@@ -118,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626883712048</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="First of the many final push">
+      <created>1626971854571</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626971854571</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +149,7 @@
     <MESSAGE value="File export" />
     <MESSAGE value="Redirect middleware thingy" />
     <MESSAGE value="Remove destroy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove destroy" />
+    <MESSAGE value="First of the many final push" />
+    <option name="LAST_COMMIT_MESSAGE" value="First of the many final push" />
   </component>
 </project>

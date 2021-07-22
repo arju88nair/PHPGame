@@ -60,19 +60,14 @@ include_once 'partials/header.php';
             <input type="hidden" class="form-control" name="mode" value="users" required>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User name">
+            <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User name" required>
             <label for="floatingInput">User name</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password"  minlength="4" required>
             <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     </form>
     <a href="/register">Sign up</a>
@@ -96,14 +91,10 @@ include_once 'partials/header.php';
             }
             // setup some local letiables
             let form = $(this);
-
-            console.log(form)
             // Let's select and cache all the fields
             let $inputs = form.find("input, select, button, textarea");
             // Serialize the data in the form
             let serializedData = form.serialize();
-            console.log(serializedData)
-
             // Let's disable the inputs for the duration of the Ajax request.
             // Note: we disable elements AFTER the form data has been serialized.
             // Disabled form elements will not be serialized.
@@ -125,7 +116,6 @@ include_once 'partials/header.php';
                     return;
                 }
                 window.location.href = '/'
-
             });
 
             // Callback handler that will be called on failure
