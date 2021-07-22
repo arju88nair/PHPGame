@@ -22,6 +22,7 @@ class HomeController extends \ControllerAbstract
     {
         parent::__construct();
         $this->mainController = new Controller();
+        session_start();
 
     }
 

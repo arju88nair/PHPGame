@@ -41,6 +41,9 @@ switch ($request_uri[0]) {
     case '/admin':
         return $HomeController->adminView();
         break;
+    case '/logout':
+        return $UserController->logout();
+        break;
 
     default:
         echo "404 not found";

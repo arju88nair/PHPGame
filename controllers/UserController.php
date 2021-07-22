@@ -14,6 +14,7 @@ class UserController extends \ControllerAbstract
      * @var Controller
      */
     private $mainController;
+
     /**
      * UserController constructor.
      */
@@ -30,7 +31,7 @@ class UserController extends \ControllerAbstract
      */
     public function registerView()
     {
-        $view = new \View('register');
+        new \View('register');
     }
 
     /**
@@ -38,8 +39,12 @@ class UserController extends \ControllerAbstract
      */
     public function loginView()
     {
-        $view = new \View('login');
+        new \View('login');
     }
+
+    /**
+     * Registration logic
+     */
 
     public function doRegister()
     {
@@ -55,6 +60,9 @@ class UserController extends \ControllerAbstract
         }
     }
 
+    /**
+     * Log in logic
+     */
     public function doLogin()
     {
         $_POST['password'] = md5($_POST["password"]);
@@ -63,7 +71,7 @@ class UserController extends \ControllerAbstract
             $_SESSION['user'] = $_POST["username"];
             $_SESSION['is_admin'] = $userExist[0]['is_admin'];
 
-            $data = ['status' => 200, 'message' => 'Successfully logged in','data' => $userExist];
+            $data = ['status' => 200, 'message' => 'Successfully logged in', 'data' => $userExist];
             header('Content-Type: application/json');
             echo json_encode($data);
         } else {
@@ -71,6 +79,18 @@ class UserController extends \ControllerAbstract
             header('HTTP/1.1 500 user does not exist');
             die(json_encode($data));
         }
+    }
+
+    /**
+     * Doing logout
+     */
+
+    public function logout()
+    {
+        session_destroy();
+        header("Location: /login");
+        exit();
+
     }
 
 }

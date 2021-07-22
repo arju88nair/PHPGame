@@ -20,8 +20,13 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/home">Roll it up</a>
+    <a class="navbar-brand">Roll it!</a>
     <div class="collapse navbar-collapse justify-content-end" id="navbar">
-
+        <?php
+        session_start();
+        if (isset($_SESSION['user'])) {
+            echo ' <a class="btn btn-primary" href="logout" role="button">Logout</a>';
+        }
+        ?>
     </div>
 </nav>

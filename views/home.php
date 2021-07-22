@@ -300,7 +300,10 @@
         </li>
     </ol>
 </div>
-<button type="button" id="roll-button">Roll Dice</button>
+<div style="margin: auto">
+    <button type="button" id="roll-button">Roll Dice</button>
+    <button type="button" id="logout">Log out</button>
+</div>
 <script>
     let count = 0;
     let values = [];
@@ -336,7 +339,7 @@
 
     function sendData() {
 
-        let data={'score':values.reduce((a, b) => a + b, 0),'mode':'game'}
+        let data = {'score': values.reduce((a, b) => a + b, 0), 'mode': 'games'}
         request = $.ajax({
             url: "/saveDice",
             type: "post",
@@ -352,8 +355,6 @@
         // Callback handler that will be called on failure
         request.fail(function (jqXHR, textStatus, errorThrown) {
             // Log the error to the console
-            $('#alert').text(errorThrown);
-            $('#alert').show();
             console.error(
                 "The following error occurred: " +
                 textStatus, errorThrown
@@ -368,7 +369,13 @@
 
     }
 
+    function logout() {
+        window.location.href = "logout"
+
+    }
+
     document.getElementById("roll-button").addEventListener("click", rollDice);
+    document.getElementById("logout").addEventListener("click", logout);
 
 </script>
 </body>
